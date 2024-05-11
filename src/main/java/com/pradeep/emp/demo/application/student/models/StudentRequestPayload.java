@@ -16,11 +16,13 @@ import java.util.Date;
 @Builder
 @Data
 public class StudentRequestPayload {
+
     @NotNull(message = "firstName can not be null.")
     @NotEmpty(message = "firstName can not be empty.")
     @Size(min = 2, max = 20, message = "The length of firstName must be between 2 and 20 characters.")
     @JsonProperty("firstName")
     public String firstName;
+
     @JsonProperty("middleName")
     public String middleName;
 
@@ -44,6 +46,7 @@ public class StudentRequestPayload {
     @Pattern(regexp = Constants.passwordRegex, message = "please enter valid password," + " Minimum eight characters, at least one letter, one number and one special character.")
     @JsonProperty("password")
     public String password;
+
     @NotNull(message = "email can not be null.")
     @NotEmpty(message = "email can not be empty.")
     @Email(message = "The email address is invalid.", flags = {Pattern.Flag.CASE_INSENSITIVE})
@@ -54,17 +57,22 @@ public class StudentRequestPayload {
     @Range(min = 10000000L, max = 999999999999L, message = "The contact no length must be in between 8 to 12 digits.")
     @JsonProperty("contactNo")
     public long contactNo;
+
     @JsonProperty("branch")
     public String branch;
+
     @JsonProperty("course")
     public String[] course;
+
     @Valid
     @JsonProperty("addressDetails")
     public Address addressDetails;
+
     @Valid
     @NotNull(message = "fatherDetails object can not be null.")
     @JsonProperty("fatherDetails")
     public Father fatherDetails;
+
     @Valid
     @NotNull(message = "motherDetails object can not be null.")
     @JsonProperty("motherDetails")
@@ -95,24 +103,30 @@ public class StudentRequestPayload {
             @NotEmpty(message = "line1 can not be empty.")
             @JsonProperty("line1")
             public String line1;
+
             @NotNull(message = "line2 can not be null.")
             @NotEmpty(message = "line2 can not be empty.")
             @JsonProperty("line2")
             public String line2;
+
             @JsonProperty("line3")
             public String line3;
+
             @NotNull(message = "city can not be null.")
             @NotEmpty(message = "city can not be empty.")
             @JsonProperty("city")
             public String city;
+
             @Range(min = 100000, max = 999999, message = "zipCode should be of length 6.")
             @Positive(message = "Zip code can not be negative.")
             @JsonProperty("zipCode")
             public int zipCode;
+
             @NotNull(message = "state can not be null.")
             @NotEmpty(message = "state can not be empty.")
             @JsonProperty("state")
             public String state;
+
             @NotNull(message = "country can not be null.")
             @NotEmpty(message = "country can not be empty.")
             @JsonProperty("country")
@@ -130,24 +144,30 @@ public class StudentRequestPayload {
             @NotEmpty(message = "line1 can not be empty.")
             @JsonProperty("line1")
             public String line1;
+
             @NotNull(message = "line2 can not be null.")
             @NotEmpty(message = "line2 can not be empty.")
             @JsonProperty("line2")
             public String line2;
+
             @JsonProperty("line3")
             public String line3;
+
             @NotNull(message = "city can not be null.")
             @NotEmpty(message = "city can not be empty.")
             @JsonProperty("city")
             public String city;
+
             @Range(min = 100000, max = 999999, message = "zipCode should be of length 6.")
             @Positive(message = "Zip code can not be negative.")
             @JsonProperty("zipCode")
             public int zipCode;
+
             @NotNull(message = "state can not be null.")
             @NotEmpty(message = "state can not be empty.")
             @JsonProperty("state")
             public String state;
+
             @NotNull(message = "country can not be null.")
             @NotEmpty(message = "country can not be empty.")
             @JsonProperty("country")
@@ -166,15 +186,20 @@ public class StudentRequestPayload {
         @Size(min = 2, max = 20, message = "The length of firstName must be between 2 and 20 characters.")
         @JsonProperty("firstName")
         public String firstName;
+
         @JsonProperty("middleName")
         public String middleName;
+
         @JsonProperty("lastName")
         public String lastName;
+
         @Range(min = 10000000L, max = 999999999999L, message = "The contact no length must be in between 8 to 12 digits.")
         @JsonProperty("contactNo")
         public long contactNo;
+
         @JsonProperty("occupation")
         public String occupation;
+
         @JsonProperty("education")
         public String education;
     }
@@ -190,19 +215,25 @@ public class StudentRequestPayload {
         @Size(min = 2, max = 20, message = "The length of firstName must be between 2 and 20 characters.")
         @JsonProperty("firstName")
         public String firstName;
+
         @JsonProperty("middleName")
         public String middleName;
+
         @JsonProperty("lastName")
         public String lastName;
+
         @Range(min = 10000000L, max = 999999999999L, message = "The contact no length must be in between 8 to 12 digits.")
         @JsonProperty("contactNo")
         public long contactNo;
+
         @NotNull(message = "Mother's midName can not be null.")
         @NotEmpty(message = "Mother's midName can not be empty.")
         @JsonProperty("midName")
         public String midName;
+
         @JsonProperty("occupation")
         public String occupation;
+
         @JsonProperty("education")
         public String education;
     }

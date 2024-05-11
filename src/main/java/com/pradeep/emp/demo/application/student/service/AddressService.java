@@ -19,6 +19,4 @@ public class AddressService {
 
         return new Address(permanentAddress, communicationAddress);
     }
-
-
 }

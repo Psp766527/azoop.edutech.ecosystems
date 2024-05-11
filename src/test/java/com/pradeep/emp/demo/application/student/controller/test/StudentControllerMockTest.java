@@ -12,6 +12,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.Date;
+
 @WebMvcTest
 public class StudentControllerMockTest {
 
@@ -34,7 +36,7 @@ public class StudentControllerMockTest {
                 .firstName("Pradeep")
                 .middleName("Singh")
                 .lastName("Kushwah")
-                .birthDate("10/08/1997")
-                .
+                .birthDate(new Date("10/08/1997"))
+                .build();
     }
 }

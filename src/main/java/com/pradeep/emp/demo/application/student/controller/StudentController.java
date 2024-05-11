@@ -101,14 +101,16 @@ public class StudentController {
         try {
 
             List<StudentDAO> studentsList = studentDaoRepo.findAll();
-
+            HttpHeaders headers = new HttpHeaders();
             if (!studentsList.isEmpty()) {
-                HttpHeaders headers = new HttpHeaders();
+                //HttpHeaders headers = new HttpHeaders();
                 headers.set("total records", String.valueOf(studentsList.size()));
                 return new ResponseEntity<>(studentsList, headers, HttpStatus.FOUND);
             } else {
                 log.info("No Student found in the pesistence store.");
-                return ResponseEntity.noContent().build();
+                headers.set("total records", String.valueOf(studentsList.size()));
+                return new ResponseEntity<>(studentsList, headers, HttpStatus.NOT_FOUND);
+                // return ResponseEntity.noContent().build();
             }
         } catch (Exception e) {
             log.error("Exception while fetching all students:: " + HttpStatus.INTERNAL_SERVER_ERROR);
