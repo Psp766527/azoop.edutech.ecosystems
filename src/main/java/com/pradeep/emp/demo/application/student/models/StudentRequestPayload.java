@@ -17,6 +17,13 @@ import java.util.Date;
 @Data
 public class StudentRequestPayload {
 
+
+    @NotNull(message = "prefix can not be null.")
+    @NotEmpty(message = "prefix can not be empty.")
+    @Size(min = 1, max = 5, message = "Then length of the prefix must be between 2 to 5 characters.")
+    @JsonProperty("prefix")
+    public String prefix;
+
     @NotNull(message = "firstName can not be null.")
     @NotEmpty(message = "firstName can not be empty.")
     @Size(min = 2, max = 20, message = "The length of firstName must be between 2 and 20 characters.")

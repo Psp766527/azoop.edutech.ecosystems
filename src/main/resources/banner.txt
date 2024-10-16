@@ -1,0 +1,13 @@
+PPPPPPPPPPPP                    KKKK                KKKK
+PPP       PPP                   KKKK            KKKK
+PPP       PPP                   KKKK        KKKK
+PPP     PPP                     KKKK    KKKK
+PPP PPP                         KKKK KKKK
+PPP                             KKKK    KKKK
+PPP                             KKKK        KKKK
+PPP            ###              KKKK            KKKK       ###
+PPP            ###              KKKK                KKKK   ###
+
+________________________________________________________________
+_________________________________________________________________
+
